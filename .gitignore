@@ -60,7 +60,7 @@ php-cs-fixer
 
 # Translations and emails templates
 
-translations/*
+
 mails/*
 !mails/fr/
 themes/default-bootstrap/lang/*
