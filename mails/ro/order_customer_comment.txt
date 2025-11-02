@@ -1,0 +1,17 @@
+ 
+
+{shop_url}
+
+Buna,
+
+Mesaj de la client
+
+Ai primit un mesaj despre comanda cu referita {order_name}.
+Client: {firstname} {lastname} ({email})
+
+Mesajul clientului:
+
+{message}
+
+[{shop_name}]({shop_url})
+Powered by [PrestaShop](https://www.prestashop-project.org/)

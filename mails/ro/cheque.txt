@@ -1,0 +1,24 @@
+ 
+
+{shop_url}
+
+Buna {firstname} {lastname},
+Iti multumim ca ai cumparat de la {shop_name}!
+
+Comanda nr. {order_name} - In asteptarea platii cu cec
+
+Comanda ta cu codul {order_name} a fost plasata cu succes. Poti astepta livrarea imediat ce este efectuata plata.
+
+Metoda de plată: cec
+
+Ai ales plata prin cec bancar. Iata informatiile necesare pentru plata ta:
+Valoare:  {total_paid}
+Platibil catre:  {check_name}
+Te rugam sa transmiti prin mail cecul tau la:  {check_address_html}
+
+Pentru a urmari comanda si a descarca factura, mergi la sectiunea [Istoric si detalii ale comenzilor]({history_url}) a contului tau de client.
+
+Daca ai un cont de oaspete, poti urmari comanda in sectiunea [Urmarirea comenzii fara cont]({guest_tracking_url}) din magazinul nostru.
+
+[{shop_name}]({shop_url})
+Powered by [PrestaShop](https://www.prestashop-project.org/)

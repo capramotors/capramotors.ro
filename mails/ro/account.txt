@@ -1,0 +1,23 @@
+ 
+
+{shop_url}
+
+Buna {firstname} {lastname},
+Iti multumim ca ti-ai creat cont la {shop_name}.
+
+Datele de autentificare in {shop_name}
+
+Ai aici datele tale de autentificare:
+Adresa de email: {email}
+
+Sfaturi importante de securitate:
+
+1. Pastreaza-ti intotdeauna datele in siguranta.
+2. Nu da nimanui datele de autentificare.
+3. Schimba parola in mod regulat.
+4. Daca banuiesti ca altcineva foloseste contul tau in mod ilegitim, te rugam sa ne anunti imediat.
+
+Poti plasa acum comenzi in magazinul nostru: [{shop_name}]({shop_url})
+
+[{shop_name}]({shop_url})
+Powered by [PrestaShop](https://www.prestashop-project.org/)

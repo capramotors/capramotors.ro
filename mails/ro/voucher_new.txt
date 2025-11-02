@@ -1,0 +1,13 @@
+ 
+
+{shop_url}
+
+Buna {firstname} {lastname},
+
+Codul cuponului a fost generat
+
+Iata codul noului tau cupon: {voucher_num}
+Pentru a-l folosi, este suficient sa copiezi si sa lipesti acest cod in timpul finalizarii comenzii.
+
+[{shop_name}]({shop_url})
+Powered by [PrestaShop](https://www.prestashop-project.org/)

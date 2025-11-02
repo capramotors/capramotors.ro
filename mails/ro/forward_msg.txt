@@ -1,0 +1,14 @@
+ 
+
+{shop_url}
+
+Buna {firstname} {lastname},
+
+Asistenta pentru clienti - Inregistrarea discutiei
+
+{employee} a dorit sa iti trimitem inregistrarea aceastei discutii.
+Istoricul discutiilor: {messages}
+{employee} a adaugat {comment}
+
+[{shop_name}]({shop_url})
+Powered by [PrestaShop](https://www.prestashop-project.org/)

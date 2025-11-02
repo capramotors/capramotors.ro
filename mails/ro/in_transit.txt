@@ -1,0 +1,18 @@
+ 
+
+{shop_url}
+
+Buna {firstname} {lastname},
+
+{meta_products}
+Comanda nr. {order_name} - In tranzit
+
+Comanda cu codul {order_name} a plecat spre tine.
+Poti urmari expeditia pachetului urmand acest link: {followup}
+
+Pentru a urmari comanda si a descarca factura, mergi la sectiunea [Istoric si detalii ale comenzilor]({history_url}) a contului tau de client.
+
+Daca ai un cont de oaspete, poti urmari comanda in sectiunea [Urmarirea comenzii fara cont]({guest_tracking_url}) din magazinul nostru.
+
+[{shop_name}]({shop_url})
+Powered by [PrestaShop](https://www.prestashop-project.org/)

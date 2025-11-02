@@ -1,0 +1,16 @@
+ 
+
+{shop_url}
+
+Mesaj de la un client al {shop_name}
+
+Adresa de e-mail a clientului: {email}
+ID comanda:  {order_name}
+Fisier atasat: {attached_file}
+
+Mesajul clientului:
+
+{message}
+
+[{shop_name}]({shop_url})
+Powered by [PrestaShop](https://www.prestashop-project.org/)

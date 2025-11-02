@@ -1,0 +1,12 @@
+ 
+
+{shop_url}
+
+Buna {firstname} {lastname},
+
+Importul s-a terminat
+
+Fisierul {filename} a fost importat in magazinul tau.
+
+[{shop_name}]({shop_url})
+Powered by [PrestaShop](https://www.prestashop-project.org/)

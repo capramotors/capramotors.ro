@@ -1,0 +1,11 @@
+ 
+
+{shop_url}
+
+Buna {firstname} {lastname},
+
+Acesta este un e-mail de test trimis de magazinul tau.
+Daca poti citi acest mesaj, inseamna ca testul a avut succes!
+
+[{shop_name}]({shop_url})
+Powered by [PrestaShop](https://www.prestashop-project.org/)

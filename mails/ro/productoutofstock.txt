@@ -1,0 +1,14 @@
+ 
+
+{shop_url}
+
+Buna {firstname} {lastname},
+
+{product} ramane fara stoc.
+
+Ai acum in stoc mai putin de {last_qty} unitati.
+Stoc disponibil: {qty}
+Reimprospateaza-ti inventarul, intra in sectiunea Catalog > Stocuri din Back Office pentru a administra stocurile.
+
+[{shop_name}]({shop_url})
+Powered by [PrestaShop](https://www.prestashop-project.org/)

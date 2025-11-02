@@ -1,0 +1,26 @@
+ 
+
+{shop_url}
+
+Buna {firstname} {lastname},
+Iti multumim ca ai cumparat de la {shop_name}!
+
+Comanda nr. {order_name} - Plata in asteptare
+
+Comanda ta cu codul {order_name} a fost plasata cu succes. Poti astepta livrarea imediat ce este efectuata plata.
+
+Metoda de plata: transfer bancar
+
+Ai ales plata prin transfer bancar sau postal. Iata informatiile necesare pentru plata ta:
+Valoare:  {total_paid}
+Titularul contului:  {bankwire_owner}
+Detaliile contului: {bankwire_details}
+Adresa bancara: {bankwire_address}
+Te rugam sa specifici numarul de referinta al comenzii tale in nota de pe ordinul de plata.
+
+Pentru a urmari comanda si a descarca factura, mergi la sectiunea [Istoric si detalii ale comenzilor]({history_url}) a contului tau de client.
+
+Daca ai un cont de oaspete, poti urmari comanda in sectiunea [Urmarirea comenzii fara cont]({guest_tracking_url}) din magazinul nostru.
+
+[{shop_name}]({shop_url})
+Powered by [PrestaShop](https://www.prestashop-project.org/)

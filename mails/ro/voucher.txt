@@ -1,0 +1,14 @@
+ 
+
+{shop_url}
+
+Buna {firstname} {lastname},
+
+Comanda nr. {order_name} - Codul cuponului a fost generat
+
+Suntem incantati sa te informam ca a fost generat un cupon pe numele tau, ca urmare a comenzii cu codul {order_name}.
+CODUL CUPONULUI: {voucher_num} in valoare de {voucher_amount}
+Pentru a-l folosi, este suficient sa copiezi si sa lipesti acest cod in timpul finalizarii comenzii.
+
+[{shop_name}]({shop_url})
+Powered by [PrestaShop](https://www.prestashop-project.org/)

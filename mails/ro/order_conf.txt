@@ -1,0 +1,39 @@
+ 
+
+{shop_url}
+
+Buna {firstname} {lastname},
+Iti multumim pentru ca ai cumparat de la {shop_name}!
+
+Detalii comanda
+
+Comanda: {order_name} Plasata pe {date}
+Plata: {payment}
+
+Referinta	Produs	Pret unitar	Cantitate	Pret total {products_txt} {discounts_txt}
+Produse	{total_products}
+Reduceri	{total_discounts}
+Livrare	{total_shipping}
+Incluzand TVA	{total_tax_paid}
+Total platit	{total_paid}
+
+Livrare
+
+Curier: {carrier}
+Plata: {payment}
+Ambalaj reciclabil: {recycled_packaging_label}
+
+Adresa de livrare
+
+{delivery_block_txt}
+
+Adresa de facturare
+
+{invoice_block_txt}
+
+Pentru a urmari comanda si a descarca factura, mergi la sectiunea [Istoric si detalii ale comenzilor]({history_url}) a contului tau de client.
+
+Daca ai un cont de oaspete, poti urmari comanda in sectiunea [Urmarirea comenzii fara cont]({guest_tracking_url}) din magazinul nostru.
+
+[{shop_name}]({shop_url})
+Powered by [PrestaShop](https://www.prestashop-project.org/)

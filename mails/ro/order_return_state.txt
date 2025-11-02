@@ -1,0 +1,14 @@
+ 
+
+{shop_url}
+
+Buna {firstname} {lastname},
+
+Returnarea #{id_order_return} a comenzii - Actualizare
+
+Am actualizat stadiul returnarii #{id_order_return}, noul stadiu este: "{state_order_return}".
+
+Pentru a urmari comanda si a descarca factura, mergi la sectiunea [Istoric si detalii ale comenzilor]({history_url}) a contului tau de client.
+
+[{shop_name}]({shop_url})
+Powered by [PrestaShop](https://www.prestashop-project.org/)

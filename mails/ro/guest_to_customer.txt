@@ -1,0 +1,18 @@
+ 
+
+{shop_url}
+
+Buna {firstname} {lastname},
+
+Contul tau de oaspete a fost transformat in unul de client
+
+Felicitari, contul tau de oaspete la {shop_name} a fost transformat intr-un cont de client!
+Adresa de email: {email}
+
+Fa clic pe urmatorul link pentru a-ti actualiza parola:
+{url}
+
+Poti accesa contul de client din magazinul nostru: [{shop_name}]({shop_url})
+
+[{shop_name}]({shop_url})
+Powered by [PrestaShop](https://www.prestashop-project.org/)

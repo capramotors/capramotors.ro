@@ -1,0 +1,17 @@
+ 
+
+{shop_url}
+
+Buna {firstname} {lastname},
+Iti multumim pentru comanda {order_name} de la {shop_name}.
+
+Comanda nr. {order_name} - Reaprovizionare necesara
+
+Din pacate, unul sau mai multe articole comandate nu sunt momentan in stoc si aceasta poate cauza o usoara intarziere a livrarii. Te rugam sa accepti scuzele noastre si te asiguram ca facem tot ce putem pentru a rezolva aceasta problema.
+
+Pentru a urmari comanda si a descarca factura, mergi la sectiunea [Istoric si detalii ale comenzilor]({history_url}) a contului tau de client.
+
+Daca ai un cont de oaspete, poti urmari comanda in sectiunea [Urmarirea comenzii fara cont]({guest_tracking_url}) din magazinul nostru.
+
+[{shop_name}]({shop_url})
+Powered by [PrestaShop](https://www.prestashop-project.org/)

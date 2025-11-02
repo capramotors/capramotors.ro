@@ -1,0 +1,12 @@
+ 
+
+{shop_url}
+
+Buna {firstname} {lastname},
+
+{reply}
+
+Te rugam sa nu replici acestui e-mail, aceasta adresa de e-mail nu poate primi mesaje. Pentru a raspunde, te rugam sa urmezi urmatorul link: {link}
+
+[{shop_name}]({shop_url})
+Powered by [PrestaShop](https://www.prestashop-project.org/)

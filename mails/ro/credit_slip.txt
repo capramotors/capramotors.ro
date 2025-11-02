@@ -1,0 +1,14 @@
+ 
+
+{shop_url}
+
+Buna {firstname} {lastname},
+
+Comanda nr. {order_name} - Nota de credit
+
+A fost generata o nota de credit pe numele tau, ca urmare a comenzii cu codul {order_name}.
+
+Pentru a verifica aceasta nota de credit si a descarca factura, mergi la sectiunea [Note de credit]({history_url}) a contului tau de client.
+
+[{shop_name}]({shop_url})
+Powered by [PrestaShop](https://www.prestashop-project.org/)
