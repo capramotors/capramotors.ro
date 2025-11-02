@@ -274,7 +274,7 @@
       </trans-unit>
       <trans-unit id="03c2e7e41ffc181a4e84080b4710e81e" approved="yes">
         <source>New</source>
-        <target state="final">Nou</target>
+        <target state="final">New arrival</target>
         <note>File: src/Adapter/Presenter/Product/ProductLazyArray.php [Line: 734]</note>
       </trans-unit>
       <trans-unit id="10ac3d04253ef7e1ddc73e6091c0cd55" approved="yes">
