@@ -1,0 +1,236 @@
+
+.text-left {
+  @extend .text-start;
+}
+
+.text-right {
+  @extend .text-end;
+}
+
+.text-center {
+  @extend .text-center;
+}
+
+
+.float-left {
+  @extend .float-start;
+}
+
+.float-right {
+  @extend .float-end;
+}
+
+.float-none {
+  @extend .float-none;
+}
+
+
+.media {
+  display: flex;
+  align-items: flex-start;
+
+  // Główny obszar treści
+  &-body {
+    flex: 1 1 auto;
+  }
+}
+
+.sr-only {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
+// Umożliwia „wyświetlenie” elementu sr-only przy focus/active
+.sr-only-focusable:active,
+.sr-only-focusable:focus {
+  position: static !important;
+  width: auto !important;
+  height: auto !important;
+  margin: 0 !important;
+  overflow: visible !important;
+  clip: auto !important;
+  white-space: normal !important;
+}
+
+
+.pull-right {
+  float: right !important;
+}
+
+.pull-left {
+  float: left !important;
+}
+
+.mt-0,
+.pt-0 {
+  @extend .m-0;
+}
+
+.mb-0,
+.pb-0 {
+  @extend .m-0;
+}
+
+
+.custom-control {
+  @extend .form-check;
+}
+
+.custom-control-label {
+  @extend .form-check-label;
+}
+
+.custom-control-input {
+  @extend .form-check-input;
+}
+
+.badge-pill {
+  @extend .rounded-pill;
+}
+
+.btn-block {
+  @extend .w-100;
+}
+
+.card-header-tabs {
+  @extend .nav-tabs;
+}
+
+.badge{
+  line-height: initial;
+}
+.badge-warning {
+  background-color: map-get($theme-colors, warning);
+  color:  #fff;
+}
+
+// Stylizacja badge-success
+.badge-success {
+  background-color: map-get($theme-colors, success);
+  color: #fff;
+}
+
+.row.no-gutters {
+  margin-right: 0;
+  margin-left: 0;
+
+  > [class^="col-"],
+  > [class*=" col-"] {
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+
+
+.tooltip-inner {
+  @extend .bg-light;
+}
+
+
+.alert-heading {
+  font-size: 1.5rem;
+}
+
+
+a {
+
+  text-decoration: none;
+
+
+  &:hover,
+  &:focus {
+
+    text-decoration: underline;
+
+  }
+}
+
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+
+:not(.dropdown-menu-custom).dropdown-menu.show{
+  transform: scale(1, 1) !important;
+  opacity: 1;
+  visibility: visible;
+  top: 100% !important;
+}
+
+
+.close {
+  float: right;
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1;
+  color: #000;
+  text-shadow: 0 1px 0 #fff;
+  opacity: .5;
+}
+
+
+button.close {
+  padding: 0;
+  background-color: transparent;
+  border: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+.close {
+  font-size: 2.1rem;
+}
+.close:not(:disabled):not(.disabled) {
+  cursor: pointer;
+}
+
+.modal-header .close {
+  padding: 1rem 1rem;
+  margin: -1rem -1rem -1rem auto;
+}
+
+.input-group .btn {
+  height: 100%;
+}
+
+.input-group>.form-control:focus, .input-group>.form-floating:focus-within, .input-group>.form-select:focus{
+z-index: 1;
+}
+
+
+// Jeśli nie masz jeszcze zdefiniowanej mapy odstępów, możesz ją zadeklarować.
+// Domyślna mapa spacers – wartości można dostosować do swoich potrzeb.
+$spacers: (
+  0: 0,
+  1: 0.25rem,
+  2: 0.5rem,
+  3: 1rem,
+  4: 1.5rem,
+  5: 3rem
+) !default;
+
+// Generowanie klas aliasowych dla margin-left (ml) i margin-right (mr)
+@each $key, $value in $spacers {
+  .ml-#{$key} {
+    margin-left: $value !important;
+  }
+  .mr-#{$key} {
+    margin-right: $value !important;
+  }
+
+  // Opcjonalnie: generowanie klas dla ujemnych marginesów, np. ml-n1, mr-n1
+  .ml-n#{$key} {
+    margin-left: -$value !important;
+  }
+  .mr-n#{$key} {
+    margin-right: -$value !important;
+  }
+}

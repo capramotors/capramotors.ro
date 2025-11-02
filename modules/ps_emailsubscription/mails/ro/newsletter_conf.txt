@@ -1,0 +1,10 @@
+ 
+
+{shop_url}
+
+Buna,
+
+Iti multumim pentru abonarea ta la acest buletin informativ.
+
+[{shop_name}]({shop_url})
+Powered by [PrestaShop](https://www.prestashop-project.org/)

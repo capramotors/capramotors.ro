@@ -1,0 +1,29 @@
+# https://devdocs.prestashop.com/8/modules/concepts/services/
+services:
+    Iqit\IqitProductVariants\Form\Modifier\ProductFormModifier:
+        class: Iqit\IqitProductVariants\Form\Modifier\ProductFormModifier
+        public: true
+        autowire: true
+        arguments:
+            - '@form.form_builder_modifier'
+            - '@translator'
+            - '@router'
+            - '@=service("prestashop.adapter.legacy.context").getEmployeeLanguageIso()'
+
+    Iqit\IqitProductVariants\Form\Product\ProductFormDataHandler:
+        class: Iqit\IqitProductVariants\Form\Product\ProductFormDataHandler
+        public: true
+
+    Iqit\IqitProductVariants\Repository\ProductVariantsRepository:
+        class: Iqit\IqitProductVariants\Repository\ProductVariantsRepository
+        public: true
+        arguments:
+            - '@=service("prestashop.adapter.legacy.context").getContext().language.id'
+            - '@=service("prestashop.adapter.legacy.context").getContext().shop.id'
+
+    Iqit\IqitProductVariants\Presenter\ProductVariantsPresenter:
+        class: Iqit\IqitProductVariants\Presenter\ProductVariantsPresenter 
+        public: true
+        autowire: true
+        arguments:
+            - '@=service("prestashop.adapter.legacy.context")'

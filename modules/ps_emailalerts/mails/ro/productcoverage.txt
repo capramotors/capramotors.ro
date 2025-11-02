@@ -1,0 +1,11 @@
+ 
+
+{shop_url}
+
+Buna,
+
+Acoperirea de stoc este mai mică decât minimul specificat de: {warning_coverage}
+Acoperirea curenta de stoc: {current_coverage}
+
+[{shop_name}]({shop_url})
+Powered by [PrestaShop](https://www.prestashop-project.org/)

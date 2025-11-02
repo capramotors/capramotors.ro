@@ -1,0 +1,44 @@
+{
+    "name": "iqitproductvariants",
+    "version": "1.0.0",
+    "author": {
+        "name": "iqit commerce",
+        "email": "support@iqit-commerce.com"
+    },
+    "license": "envato regular license",
+    "scripts": {
+        "vite:watch": "vite build --watch --config vite.dev.mjs",
+        "vite:build": "vite build --emptyOutDir --config vite.prod.mjs",
+        "lint": "eslint \"_dev/**/*.ts\" && stylelint \"_dev/**/*.scss\"",
+        "lint-fix": "eslint \"_dev/**/*.ts\" --fix && stylelint \"_dev/**/*.scss\" --fix"
+    },
+    "devDependencies": {
+        "@eslint/js": "^9.21.0",
+        "@typescript-eslint/eslint-plugin": "^8.26.0",
+        "@typescript-eslint/parser": "^8.26.0",
+        "css-loader": "^7.1.2",
+        "cssnano": "^7.0.6",
+        "eslint": "^9.21.0",
+        "eslint-config-prettier": "^10.0.2",
+        "eslint-plugin-prettier": "^5.2.3",
+        "globals": "^16.0.0",
+        "postcss": "^8.5.3",
+        "postcss-scss": "^4.0.9",
+        "prettier": "^3.5.3",
+        "sass-embedded": "^1.85.1",
+        "stylelint": "^16.15.0",
+        "stylelint-config-recommended": "^15.0.0",
+        "stylelint-config-recommended-scss": "^14.1.0",
+        "stylelint-prettier": "^5.0.3",
+        "stylelint-scss": "^6.11.1",
+        "terser": "^5.39.0",
+        "typescript": "^5.7.3",
+        "vite": "^6.2.1",
+        "vite-plugin-eslint": "^1.8.1",
+        "base64-js": "^1.5.1",
+        "vite-plugin-stylelint": "^6.0.0"
+    },
+    "dependencies": {
+ 
+    }
+}

@@ -1,0 +1,13 @@
+{
+  "require": {
+    "php": ">=8.1",
+    "scssphp/scssphp": "^2.0.1"
+  },
+  "config": {
+    "platform": { "php": "8.1.0" },
+    "preferred-install": "dist",
+    "classmap-authoritative": true,
+    "optimize-autoloader": true,
+    "prepend-autoloader": false
+  }
+}

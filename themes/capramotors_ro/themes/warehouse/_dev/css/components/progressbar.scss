@@ -1,0 +1,9 @@
+.progress {
+  background: red;
+  height: 0.4rem;
+  
+  &-bar {
+    height: 100%;
+    transition: 0.25s ease-out;
+  }
+}

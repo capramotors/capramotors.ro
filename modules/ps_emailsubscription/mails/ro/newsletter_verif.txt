@@ -1,0 +1,11 @@
+ 
+
+{shop_url}
+
+Buna,
+
+Multumim pentru abonarea la buletinul nostru informativ. Te rugam sa faci clic pe urmatorul link pentru a iti confirma optiunea:
+{verif_url}
+
+[{shop_name}]({shop_url})
+Powered by [PrestaShop](https://www.prestashop-project.org/)

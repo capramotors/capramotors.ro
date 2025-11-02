@@ -1,0 +1,1 @@
+$((()=>{window.prestashop.component.initComponents(["TranslatableField","TranslatableInput"]);new window.prestashop.component.ChoiceTree("#iqit_product_flag_shop_association").enableAutoCheckChildren();new window.prestashop.component.ChoiceTree("#iqit_product_flag_categories").enableAutoCheckChildren()}));

@@ -1,0 +1,104 @@
+imports:
+    - { resource: ./common.yml }
+    
+services:
+  _defaults:
+    public: false
+    autowire: true
+    autoconfigure: true
+
+  Iqit\IqitProductFlags\Controller\IqitProductFlagsController: ~
+
+  # installer
+  iqit.iqitproductflags.iqit_product_flag_installer:
+    class: 'Iqit\IqitProductFlags\Database\IqitProductFlagInstaller'
+    arguments:
+      - '@doctrine.dbal.default_connection'
+      - '%database_prefix%'
+
+
+  #creation/edition form
+  iqit.iqitproductflags.form.identifiable_object.data_provider.iqit_product_flag_form_data_provider:
+    class: 'Iqit\IqitProductFlags\Form\IqitProductFlagFormDataProvider'
+    autowire: true
+
+  iqit.iqitproductflags.form.identifiable_object.builder.iqit_product_flag_form_builder:
+    class: 'PrestaShop\PrestaShop\Core\Form\IdentifiableObject\Builder\FormBuilder'
+    factory: ['@prestashop.core.form.builder.form_builder_factory', 'create']
+    arguments:
+      - 'Iqit\IqitProductFlags\Form\IqitProductFlagType'
+      - '@iqit.iqitproductflags.form.identifiable_object.data_provider.iqit_product_flag_form_data_provider'
+
+  iqit.iqitproductflags.form.identifiable_object.data_handler.iqit_product_flag_form_data_handler:
+    class: 'Iqit\IqitProductFlags\Form\IqitProductFlagFormDataHandler'
+    arguments:
+      - '@doctrine.orm.default_entity_manager'
+      - '@prestashop.core.admin.lang.repository'
+
+  iqit.iqitproductflags.form.identifiable_object.handler.iqit_product_flag_form_handler:
+    class: 'PrestaShop\PrestaShop\Core\Form\IdentifiableObject\Handler\FormHandler'
+    factory: ['@prestashop.core.form.identifiable_object.handler.form_handler_factory', 'create']
+    arguments:
+      - '@iqit.iqitproductflags.form.identifiable_object.data_handler.iqit_product_flag_form_data_handler'
+
+  #grid services
+  iqit.iqitproductflags.grid.definition.factory.iqit_product_flags:
+    class: 'Iqit\IqitProductFlags\Grid\Definition\Factory\IqitProductFlagGridDefinitionFactory'
+    parent: 'prestashop.core.grid.definition.factory.abstract_grid_definition'
+    public: true
+
+  iqit.iqitproductflags.grid.query.iqit_product_flag_query_builder:
+    class: 'Iqit\IqitProductFlags\Grid\Query\IqitProductFlagQueryBuilder'
+    parent: 'prestashop.core.grid.abstract_query_builder'
+    public: true
+    autowire: true,
+    bind:
+      $languageId: '@=service("prestashop.adapter.legacy.context").getContext().language.id'
+
+
+  iqit.iqitproductflags.grid.data.factory.iqit_product_flag_data_factory:
+    class: 'PrestaShop\PrestaShop\Core\Grid\Data\Factory\DoctrineGridDataFactory'
+    arguments:
+      - '@iqit.iqitproductflags.grid.query.iqit_product_flag_query_builder'
+      - '@prestashop.core.hook.dispatcher'
+      - '@prestashop.core.grid.query.doctrine_query_parser'
+      - 'block_content'
+
+  iqit.iqitproductflags.grid.iqit_product_flag_grid_factory:
+    class: 'PrestaShop\PrestaShop\Core\Grid\GridFactory'
+    arguments:
+      - '@iqit.iqitproductflags.grid.definition.factory.iqit_product_flags'
+      - '@iqit.iqitproductflags.grid.data.factory.iqit_product_flag_data_factory'
+      - '@prestashop.core.grid.filter.form_factory'
+      - '@prestashop.core.hook.dispatcher'
+
+  # config form
+  iqit.iqitproductflags.iqit_product_flag.configuration:
+    class: 'Iqit\IqitProductFlags\Form\IqitProductFlagDataConfiguration'
+    arguments:
+      - '@prestashop.adapter.legacy.configuration'
+      - '@prestashop.adapter.shop.context'
+      - '@prestashop.adapter.multistore_feature'
+
+  iqit.iqitproductflags.iqit_product_flag_configuration.form_provider:
+    class: 'Iqit\IqitProductFlags\Form\IqitProductFlagConfigurationFormDataProvider'
+    arguments:
+      - '@iqit.iqitproductflags.iqit_product_flag.configuration'
+
+  iqit.iqitproductflags.iqit_product_flag_configuration.form_handler:
+    class: 'PrestaShop\PrestaShop\Core\Form\Handler'
+    arguments:
+      - '@form.factory'
+      - '@prestashop.core.hook.dispatcher'
+      - '@iqit.iqitproductflags.iqit_product_flag_configuration.form_provider'
+      - 'Iqit\IqitProductFlags\Form\IqitProductFlagConfigurationType'
+      - 'ConfigurationForm'
+
+  # content block form
+  iqit.iqitproductflags.form.iqit_product_flag_type:
+    class: 'Iqit\IqitProductFlags\Form\IqitProductFlagType'
+    autowire: true
+    public: true
+    autoconfigure: true
+    calls:
+       - { method: setTranslator, arguments: [ '@translator' ] }

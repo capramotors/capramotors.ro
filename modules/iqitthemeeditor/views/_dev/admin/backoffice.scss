@@ -1,0 +1,421 @@
+@import "lib/bootstrap-colorpicker/scss/_colorpicker";
+@import "lib/codeflask/scss/_codeflask";
+@import "lib/prismjs/scss/_prism";
+@import 'preloaders';
+
+.info-tabs {
+  width: 16.66667%;
+  float: left;
+
+  .iqit-buttons a {
+    display: block;
+    background: #e25d58;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    font-weight: bold;
+    font-size: 130%;
+    text-decoration: none;
+
+    i{
+      font-size: 120%;
+      margin-left: 5px;
+    }
+
+    &:hover{
+      background: #a7524d;
+    }
+  }
+
+  img {
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 10px;
+  }
+  .theme-info {
+    background: #545454;
+    text-align: center;
+    padding: 20px;
+    color: #fff;
+    border-bottom: 3px solid #484848;
+  }
+  .theme-info iframe {
+    margin-top: 10px;
+  }
+}
+
+.iqit-config-tabs {
+  list-style-type: none;
+  background: #545454;
+  color: #fff;
+  padding: 0;
+  > .tab {
+  }
+  > .tab.active {
+    background: #e25d58
+  }
+  > .tab > a {
+    color: #fff;
+    text-decoration: none;
+    padding: 12px 20px;
+    border-bottom: 1px solid #676767;
+    display: block;
+    display: block;
+  }
+}
+
+.iqit-config-panels {
+  border-left: 4px solid #e25d58;
+  width: 83.33333%;
+  float: left;
+  .tab-panel {
+    display: none;
+  }
+  .tab-panel.active {
+    display: block;
+  }
+
+  .tab-panel .panel {
+    -webkit-border-radius: 0px !important;
+    border-radius: 0px !important;
+    margin: 0px !important;
+    border: none !important;
+  }
+  .hidden-option {
+    display: none;
+  }
+  .visible-option {
+    display: block;
+  }
+  .visible-inline-option {
+    display: inline-block;
+  }
+}
+
+.box-shadow-generator {
+  .shadowpreview {
+    padding: 20px;
+    display: inline-block;
+    margin: 20px 0 10px;
+    font-style: italic;
+    background: #fbfbfb;
+  }
+  .boxshadow-control {
+    display: inline-block;
+    margin: 10px 10px 0 0;
+    vertical-align: top;
+  }
+  .boxshadow-control > input {
+    margin-top: 4px;
+  }
+  .colorpicker-component {
+    margin-left: 0px;
+    margin-top: 4px;
+    max-width: 120px;
+  }
+  .box-shadow-controls {
+    margin-top: 10px;
+    background: #f7f7f7;
+    padding: 5px 15px;
+  }
+}
+
+.width-150 {
+  width: 150px !important;
+}
+
+.width-70 {
+  width: 70px !important;
+}
+
+.width-60 {
+  width: 60px !important;
+}
+
+  .background-wrapper {
+  background: #f7f7f7;
+  margin-bottom: 15px;
+
+  .visible-option {
+    display: inline-block;
+    width: 105px;
+    padding: 5px;
+  }
+  .control-label {
+    width: 100%;
+    text-align: left !important;
+    margin-bottom: 4px !important;
+  }
+  .col-lg-9 {
+    width: 100% !important;
+  }
+  select.fixed-width-xl {
+    width: 100px !important;
+  }
+  .form-group {
+    margin: 0px !important;
+  }
+}
+
+.colorpicker-component {
+  margin-left: 5px;
+}
+
+.title-reparator {
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  background: #eeeeee;
+  padding: 12px 0;
+}
+
+.subtitle-reparator {
+  font-weight: bold;
+  top: -12px;
+  margin-top: 8px;
+}
+
+.iqit-code-editor {
+  height: 500px !important;
+  width: 100%;
+  position: relative;
+}
+
+.image-select {
+
+  .image-option-check {
+    display: none;
+    color: #e25d58;
+  }
+
+  input {
+    margin: 0;
+    padding: 0;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    display: none !important;
+  }
+
+  input:active + .image-option {
+    opacity: 1;
+  }
+  input:checked + .image-option {
+    -webkit-filter: none;
+    -moz-filter: none;
+    filter: none;
+    border-color: #e25d58;
+    .image-option-title {
+      border-color: #e25d58;
+    }
+    .image-option-check {
+      display: inline;
+      float: right;
+      color: #e25d58;
+    }
+  }
+
+  .image-option {
+    position: relative;
+    display: inline-block;
+    border: 1px solid #eeeeee;
+    padding: 0px 10px 10px 10px;
+    -webkit-transition: all 100ms ease-in;
+    -moz-transition: all 100ms ease-in;
+    transition: all 100ms ease-in;
+    -webkit-filter: grayscale(.7) opacity(.5);
+    -moz-filter: grayscale(.7) opacity(.5);
+    filter: grayscale(.7) opacity(.5);
+    margin: 0px 10px 10px 0px;
+  }
+
+  .preloader-option {
+    width: 240px;
+    height: 240px;
+    overflow: hidden;
+  }
+
+  .image-option:hover {
+    -webkit-filter: grayscale(.5) opacity(.9);
+    -moz-filter: grayscale(.5) opacity(.9);
+    filter: grayscale(.5) opacity(.9);
+  }
+
+  .image-option-label {
+    cursor: pointer;
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    z-index: 22;
+  }
+  .image-option-title {
+    border-bottom: 1px solid #eeeeee;
+    display: block;
+    margin-left: -10px;
+    margin-right: -10px;
+    padding: 5px 10px;
+    margin-bottom: 10px;
+  }
+}
+
+.single-option-switch-wrapper {
+  padding: 0px !important;
+}
+
+.single-option-switch {
+  position: relative;
+
+  input {
+    display: none;
+  }
+
+  label {
+    height: 29px;
+    line-height: 20px;
+    background-color: #2eacce;
+    color: #fff;
+    padding: 5px 8px;
+    display: block;
+    font-weight: normal;
+    margin: 0px;
+  }
+
+  input:checked + label {
+    display: none;
+  }
+
+  input:checked + label + input + label {
+    background-color: #E08F95;
+  }
+
+  input + label + input:checked + label {
+    display: none;
+  }
+}
+
+#iqit-config-tabs {
+  > li > ul {
+    display: none;
+    list-style-type: none;
+    background: #3c3c3c;
+    padding: 12px 0px 12px 12px;
+  }
+  > li.active > ul {
+    display: block;
+  }
+  > li.active > ul > li {
+    padding: 8px 10px;
+  }
+  > li.active > ul > li.active {
+    background: #e25d58;
+  }
+  > li > ul a {
+    color: #fff;
+    display: block;
+  }
+
+}
+
+
+.input-group-range{
+  width: 100%;
+  .range-slider{
+    display: table-cell !important;
+    float: left;
+    width: 60% !important;
+    margin: 12px 10px 0 3px;
+  }
+}
+
+input[type=range] {
+  -webkit-appearance: none;
+  width: 100%;
+  margin: 4px 0;
+}
+input[type=range]:focus {
+  outline: none;
+}
+input[type=range]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 5px;
+  cursor: pointer;
+  box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.71), 0px 0px 0px rgba(13, 13, 13, 0.71);
+  background: #e6e6e6;
+  border-radius: 1.3px;
+  border: 0px solid #010101;
+}
+input[type=range]::-webkit-slider-thumb {
+  box-shadow: 0.3px 0.3px 0.9px rgba(0, 0, 0, 0.2), 0px 0px 0.3px rgba(13, 13, 13, 0.2);
+  border: 0px solid rgba(0, 0, 0, 0.57);
+  height: 13px;
+  width: 8px;
+  border-radius: 8px;
+  background: #aaaaaa;
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -4px;
+}
+input[type=range]:focus::-webkit-slider-runnable-track {
+  background: #e6e6e6;
+}
+input[type=range]::-moz-range-track {
+  width: 100%;
+  height: 5px;
+  cursor: pointer;
+  box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.71), 0px 0px 0px rgba(13, 13, 13, 0.71);
+  background: #e6e6e6;
+  border-radius: 1.3px;
+  border: 0px solid #010101;
+}
+input[type=range]::-moz-range-thumb {
+  box-shadow: 0.3px 0.3px 0.9px rgba(0, 0, 0, 0.2), 0px 0px 0.3px rgba(13, 13, 13, 0.2);
+  border: 0px solid rgba(0, 0, 0, 0.57);
+  height: 13px;
+  width: 8px;
+  border-radius: 8px;
+  background: #aaaaaa;
+  cursor: pointer;
+}
+input[type=range]::-ms-track {
+  width: 100%;
+  height: 5px;
+  cursor: pointer;
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
+}
+input[type=range]::-ms-fill-lower {
+  background: #e6e6e6;
+  border: 0px solid #010101;
+  border-radius: 2.6px;
+  box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.71), 0px 0px 0px rgba(13, 13, 13, 0.71);
+}
+input[type=range]::-ms-fill-upper {
+  background: #e6e6e6;
+  border: 0px solid #010101;
+  border-radius: 2.6px;
+  box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.71), 0px 0px 0px rgba(13, 13, 13, 0.71);
+}
+input[type=range]::-ms-thumb {
+  box-shadow: 0.3px 0.3px 0.9px rgba(0, 0, 0, 0.2), 0px 0px 0.3px rgba(13, 13, 13, 0.2);
+  border: 0px solid rgba(0, 0, 0, 0.57);
+  height: 13px;
+  width: 8px;
+  border-radius: 8px;
+  background: #aaaaaa;
+  cursor: pointer;
+  height: 5px;
+}
+input[type=range]:focus::-ms-fill-lower {
+  background: #e6e6e6;
+}
+input[type=range]:focus::-ms-fill-upper {
+  background: #e6e6e6;
+}
+
+
+
+

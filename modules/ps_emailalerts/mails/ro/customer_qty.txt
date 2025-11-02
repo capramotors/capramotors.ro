@@ -1,0 +1,13 @@
+ 
+
+{shop_url}
+
+Buna,
+
+{product} este acum disponibil.
+
+Vesti bune, acest articol este pe stoc din nou!
+Fa clic pe urmatorul link pentru a vizita pagina produsului si a-l comanda: [{product}]({product_link})
+
+[{shop_name}]({shop_url})
+Powered by [PrestaShop](https://www.prestashop-project.org/)

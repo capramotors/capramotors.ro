@@ -1,0 +1,7 @@
+services:
+    iqit.iqitproductflags.repository.flags_repository:
+        class: Iqit\IqitProductFlags\Repository\FlagRepository
+        public: true
+        factory: ['@doctrine.orm.default_entity_manager', getRepository]
+        arguments:
+            - Iqit\IqitProductFlags\Entity\IqitProductFlag

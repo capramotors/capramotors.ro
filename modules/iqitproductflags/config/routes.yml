@@ -1,0 +1,49 @@
+iqitproductflags:
+    path: /iqitproductflags/configuration
+    methods: [GET]
+    defaults:
+        _controller: 'Iqit\IqitProductFlags\Controller\IqitProductFlagsController::index'
+        _legacy_controller: 'AdminIqitProductFlags'
+
+iqitproductflags_create:
+    path: /iqitproductflags/flag/create
+    methods: [GET, POST]
+    defaults:
+        _controller: 'Iqit\IqitProductFlags\Controller\IqitProductFlagsController::create'
+        _legacy_controller: 'AdminIqitProductFlags'
+
+iqitproductflags_edit:
+    path: /iqitproductflags/flag/{flagId}/edit
+    methods: [GET, POST]
+    defaults:
+        _controller: 'Iqit\IqitProductFlags\Controller\IqitProductFlagsController::edit'
+        _legacy_controller: 'AdminIqitProductFlags'
+    requirements:
+        flagId: \d+    
+
+iqitproductflags_delete:
+    path: /iqitproductflags/flag/{flagId}/delete
+    methods: [GET, POST]
+    defaults:
+        _controller: 'Iqit\IqitProductFlags\Controller\IqitProductFlagsController::delete'
+        _legacy_controller: 'AdminIqitProductFlags'
+    requirements:
+        flagId: \d+    
+
+iqitproductflags_toggle_status:
+    path: /iqitproductflags/flag/{flagId}/toggle
+    methods: [POST]
+    defaults:
+        _controller: 'Iqit\IqitProductFlags\Controller\IqitProductFlagsController::toggleStatus'
+        _legacy_controller: 'AdminIqitProductFlags'
+    requirements:
+        flagId: \d+       
+
+iqitproductflags_update_positions:
+    path: /iqitproductflags/flag/positions
+    methods: [POST]
+    defaults:
+        _controller: 'Iqit\IqitProductFlags\Controller\IqitProductFlagsController::updatePositions'
+        _legacy_controller: 'AdminIqitProductFlags'
+
+

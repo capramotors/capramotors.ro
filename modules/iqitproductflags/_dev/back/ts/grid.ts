@@ -1,0 +1,37 @@
+/**
+ * Copyright since 2025 iqit-commerce.com
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Envato Regular License,
+ * which is bundled with this package in the file LICENSE.md.
+ * It is also available through the world-wide-web at the following URL:
+ * https://themeforest.net/licenses/terms/regular
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to support@iqit-commerce.com so we can send you a copy immediately.
+ *
+ * @author    iqit-commerce.com <support@iqit-commerce.com>
+ * @copyright Since 2025 iqit-commerce.com
+ * @license   Envato Regular License
+ */
+
+/* eslint-disable */
+declare const $: any;
+declare const prestashop: any;
+declare global {
+    interface Window {
+        prestashop: any;
+    }
+}
+/* eslint-enable */
+
+$(() => {
+  window.prestashop.component.initComponents(['MultistoreConfigField', 'Grid']);
+  const iqitBlockGrid = new window.prestashop.component.Grid('iqit_grid');
+  iqitBlockGrid.addExtension(new window.prestashop.component.GridExtensions.SortingExtension());
+  iqitBlockGrid.addExtension(new prestashop.component.GridExtensions.AsyncToggleColumnExtension());
+  iqitBlockGrid.addExtension(new window.prestashop.component.GridExtensions.PositionExtension());
+});
+
+export {};
