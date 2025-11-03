@@ -1,3 +1,0 @@
-DROP TABLE IF EXISTS PREFIXiqit_threesixty;
-DROP TABLE IF EXISTS PREFIXiqit_productvideo;
-

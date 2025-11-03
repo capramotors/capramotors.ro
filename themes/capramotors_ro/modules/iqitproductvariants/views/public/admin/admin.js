@@ -1,1 +1,0 @@
-class t{constructor(){}init(){new window.prestashop.component.EntitySearchInput($("#product_description_variants"),{onRemovedContent:()=>{prestashop.component.EventEmitter.emit("updateSubmitButtonState")},onSelectedContent:()=>{prestashop.component.EventEmitter.emit("updateSubmitButtonState")}})}}$((()=>{(new t).init()}));
