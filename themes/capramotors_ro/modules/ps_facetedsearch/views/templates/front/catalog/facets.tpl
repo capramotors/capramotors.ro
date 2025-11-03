@@ -38,6 +38,7 @@
             {if isset($facet.properties.id_feature)}
             data-feature-id="{$facet.properties.id_feature}"
             {/if}
+            >
           <h4 class="block-title facet-title sasa"><span>{$facet.label}</span></h4>
         {assign var=_expand_id value=10|mt_rand:100000}
         {assign var=_collapse value=true}
