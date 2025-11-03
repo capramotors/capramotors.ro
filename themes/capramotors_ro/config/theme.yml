@@ -1,0 +1,8 @@
+parent: warehouse
+name: capramotors_ro
+display_name: CapraMotors.ro Theme
+version: 1.0.0
+author:
+  name: 'l33t'
+assets:
+  use_parent_assets: true

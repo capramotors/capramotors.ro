@@ -2,14 +2,14 @@ name: warehouse
 display_name: Warehouse
 version: 4.8.0
 author:
-  name: 'IQIT COMMERCE'
-  email: 'support@iqit-commerce.com'
-  url: 'http://www.iqit-commerce.com'
+  name: "IQIT COMMERCE"
+  email: "support@iqit-commerce.com"
+  url: "http://www.iqit-commerce.com"
 
 meta:
   compatibility:
-    from: 9.0.0
-    to: ~
+      from: 9.0.0
+      to: ~
 
   available_layouts:
     layout-full-width:
@@ -25,6 +25,7 @@ meta:
       name: Two Columns, small right column
       description: Two columns with a small right column
 
+
 global_settings:
   configuration:
     PS_IMAGE_QUALITY: png
@@ -32,62 +33,60 @@ global_settings:
     PS_BLOCK_CART_AJAX: true
     PS_PRODUCTS_PER_PAGE: 24
   modules:
-    to_enable:
-      - revsliderprestashop
-      - iqitadditionaltabs
-      - iqithtmlandbanners
-      - iqitcompare
-      - iqitcontactpage
-      - iqitcookielaw
-      - iqitcrossselling
-      - iqitcountdown
-      - iqitelementor
-      - iqitemailsubscriptionconf
-      - iqitfreedeliverycount
-      - iqitlinksmanager
-      - iqitmegamenu
-      - iqitpopup
-      - iqitproductsnav
-      - iqitproductflags
-      - iqitproducttags
-      - iqitreviews
-      - iqitsearch
-      - iqitsizecharts
-      - iqitthemeeditor
-      - iqitwishlist
-      - iqitproductvariants
-      - iqitextendedproduct
-      - ps_emailsubscription
-      - ps_currencyselector
-      - ps_languageselector
-      - ph_simpleblog
-      - ph_blog_column_custom
-      - ph_relatedposts
-      - iqitdashboardnews
-      - iqitsociallogin
-    to_disable:
-      - ps_linklist
-      - ps_mainmenu
-      - ps_categorytree
-      - ps_bestsellers
-      - ps_featuredproducts
-      - ps_newproducts
-      - ps_viewedproduct
-      - ps_themecusto
-      - psxdesign
-      - ps_specials
-      - ps_searchbar
-      - ps_imageslider
-      - ps_customtext
-      - blockreassurance
-      - ps_banner
-      - ps_contactinfo
-      - ps_socialfollow
-      - blockwishlist
+   to_enable:
+     - revsliderprestashop
+     - iqitadditionaltabs
+     - iqithtmlandbanners
+     - iqitcompare
+     - iqitcontactpage
+     - iqitcookielaw
+     - iqitcrossselling
+     - iqitcountdown
+     - iqitelementor
+     - iqitemailsubscriptionconf
+     - iqitfreedeliverycount
+     - iqitlinksmanager
+     - iqitmegamenu
+     - iqitpopup
+     - iqitproductsnav
+     - iqitproductflags
+     - iqitproducttags
+     - iqitreviews
+     - iqitsearch
+     - iqitsizecharts
+     - iqitthemeeditor
+     - iqitwishlist
+     - iqitproductvariants
+     - iqitextendedproduct
+     - ps_emailsubscription
+     - ph_simpleblog
+     - ph_blog_column_custom
+     - ph_relatedposts
+     - iqitdashboardnews
+     - iqitsociallogin
+   to_disable:
+     - ps_linklist
+     - ps_mainmenu
+     - ps_categorytree
+     - ps_bestsellers
+     - ps_featuredproducts
+     - ps_newproducts
+     - ps_viewedproduct
+     - ps_themecusto
+     - psxdesign
+     - ps_specials
+     - ps_searchbar
+     - ps_imageslider
+     - ps_customtext
+     - blockreassurance
+     - ps_banner
+     - ps_contactinfo
+     - ps_socialfollow
+     - blockwishlist
   hooks:
     modules_to_hook:
       displayNav1:
-        - iqitlinksmanager
+         - iqitlinksmanager
       displayNav2:
         - ps_languageselector
         - ps_currencyselector
@@ -145,6 +144,7 @@ global_settings:
       displayManufacturerElementor:
         - iqitelementor
 
+
   image_types:
     cart_default:
       width: 125
@@ -187,6 +187,8 @@ theme_settings:
     best-sales: layout-left-column
     new-products: layout-left-column
     prices-drop: layout-left-column
+
+
 
 dependencies:
   modules:
