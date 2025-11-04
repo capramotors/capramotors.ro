@@ -55,12 +55,11 @@
       var $label = $('<p>', {
         id: labelId,
         text: fmt(min) + unit + ' - ' + fmt(max) + unit,
-        css: { margin: '6px 0' },
       });
 
       var $slider = $('<div>', {
         id: sliderId,
-        css: { margin: '6px 0' },
+        class: 'cp-experimental-slider',
       });
 
       var $header = $facet.find('h4.facet-title');
@@ -71,7 +70,7 @@
         range: true,
         min: min,
         max: max,
-        step: Math.round((max - min) / 5),
+        step: 5,
         values: [min, max],
         slide: function (e, ui) {
           $('#' + labelId).text(

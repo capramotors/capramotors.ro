@@ -53,3 +53,38 @@
     display: block;
   }
 }
+
+/* custom sliders */
+.cp-experimental-slider {
+  margin: 18px 5px 24px 5px;
+  height: 6px;
+  border: 0;
+  background: rgba(204, 204, 204, 0.3);
+}
+
+.cp-experimental-slider .ui-slider-handle {
+  display: flex;
+  justify-content: center;
+  height: 25px;
+  border: 0;
+  background: none;
+  cursor: pointer;
+  top: -0.52em;
+}
+
+.cp-experimental-slider .ui-slider-handle:after {
+  content: '';
+  display: block;
+  width: 8px;
+  height: 25px;
+  top: -10px;
+  cursor: pointer;
+  border: 1px solid rgba(161, 161, 161, 0.25);
+  box-shadow: none;
+  background: #fff;
+  border-radius: 3px;
+}
+
+.cp-experimental-slider .ui-slider-range {
+  background: rgba(0, 0, 0, 0.6);
+}
