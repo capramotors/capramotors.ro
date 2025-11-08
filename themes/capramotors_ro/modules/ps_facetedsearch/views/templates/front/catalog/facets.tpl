@@ -37,6 +37,7 @@
             data-type="{$facet.type}"
             {if isset($facet.properties.id_feature)}
             data-feature-id="{$facet.properties.id_feature}"
+            data-l10n-name="{$facet.label}"
             {/if}
             >
           <h4 class="block-title facet-title sasa"><span>{$facet.label}</span></h4>
@@ -177,6 +178,7 @@
                 data-slider-encoded-url="{$filter.nextEncodedFacetsURL}"
                 {if $facet.type == 'feature' && isset($facet.properties.id_feature)}
                 data-feature-id="{$facet.properties.id_feature}"
+                data-l10n-name="{$facet.label}"
                 {/if}
               >
                 <li>
