@@ -49,6 +49,20 @@
                     </div>
                 </div>
 
+                <div class="form-group row">
+                    <label class="col-md-3 form-control-label" for="phone">{l s='Phone number' d='Shop.Forms.Labels'}</label>
+                    <div class="col-md-6">
+                        <input
+                                class="form-control"
+                                id="phone"
+                                name="phone"
+                                type="tel"
+                                value="{$contact.phone|default:''}"
+                                placeholder="{l s='Your phone number' d='Shop.Forms.Help'}"
+                        >
+                    </div>
+                </div>
+
                 {if $contact.orders}
                     <div class="form-group row">
                         <label class="col-md-3 form-control-label" for="id-order">{l s='Order reference' d='Shop.Forms.Labels'}</label>
