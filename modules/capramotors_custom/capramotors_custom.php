@@ -61,14 +61,14 @@ class Capramotors_Custom extends Module
      */
     public function hookActionFrontControllerSetMedia()
     {
-        // Register jQuery UI Touch Punch after jQuery plugins but before custom.js
-        // Priority 800 ensures it loads after jQuery plugins (50-200) but before custom.js (1000)
-        // Position 'head' places it in the head element as requested
+        // Register jQuery UI Touch Punch after jQuery UI plugins but before custom.js
+        // Priority 800 ensures it loads after jQuery UI (50-200) but before custom.js (1000)
+        // Position 'bottom' places it at the bottom of the page between jQuery UI and custom.js
         $this->context->controller->registerJavascript(
             'jquery-ui-touch-punch',
             'modules/' . $this->name . '/views/js/jquery-ui-touch-punch.js',
             [
-                'position' => 'head',
+                'position' => 'bottom',
                 'priority' => 800,
             ]
         );
