@@ -99,7 +99,7 @@
                                   href="{$filter.nextEncodedFacetsURL}"
                                   class="_gray-darker search-link js-search-link"
                                   rel="nofollow"
-                                  data-value="{$filter.label|trim|regex_replace:"/[^0-9]/":""}"
+                                  data-value="{$filter.label|trim}"
                           >
                               {$filter.label}
                               {if $filter.magnitude and $show_quantities}
@@ -144,7 +144,7 @@
                           rel="nofollow"
                           href="{$filter.nextEncodedFacetsURL}"
                           class="select-list dropdown-item {if $filter.active}current{/if} search-link js-search-link"
-                          data-value="{$filter.label|trim|regex_replace:"/[^0-9]/":""}"
+                          data-value="{$filter.label|trim}"
                         >
                           {$filter.label}
                           {if $filter.magnitude and $show_quantities}
