@@ -22,8 +22,8 @@
                     </div>
                 </div>
 
-                {*
-                <div class="form-group row">
+
+                <div class="form-group row d-none">
                     <label class="col-md-3 form-control-label" for="id_contact">{l s='Subject' d='Shop.Forms.Labels'}</label>
                     <div class="col-md-6">
                         <select name="id_contact"  id="id_contact"  class="form-control form-control-select">
@@ -33,7 +33,7 @@
                         </select>
                     </div>
                 </div>
-                *}
+
 
                 <div class="form-group row">
                     <label class="col-md-3 form-control-label" for="email">{l s='Email address' d='Shop.Forms.Labels'}</label>
