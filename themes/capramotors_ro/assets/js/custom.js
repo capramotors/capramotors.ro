@@ -161,10 +161,7 @@
           );
           console.log('drag:', ui.values[0], ui.values[1]);
         },
-        change: function (e, ui) {
-          console.log('set:', ui.values[0], ui.values[1]);
-          console.log('Later we emit updateFacets here');
-        },
+        change: function (e, ui) {},
       });
 
       console.log('%c Slider ready for feature', 'color:green', fid, min, max);
