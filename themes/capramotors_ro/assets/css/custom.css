@@ -87,3 +87,18 @@
 .cp-experimental-slider .ui-slider-range {
   background: rgba(0, 0, 0, 0.6);
 }
+
+/* kill the margin on the product tabs on pdp */
+#main-product-wrapper .product_header_container {
+  border: none;
+}
+
+#main-product-wrapper .product-information .product-tabs {
+  margin-top: 0;
+}
+
+#main-product-wrapper .product-information .product-additional-info,
+#add-to-cart-or-refresh {
+  display: none;
+}
+/* kill the margin on the product tabs on pdp */
