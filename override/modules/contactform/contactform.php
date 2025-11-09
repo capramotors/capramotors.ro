@@ -29,7 +29,7 @@ if (!defined('_PS_VERSION_')) {
 
 use PrestaShop\PrestaShop\Core\Module\WidgetInterface;
 
-class Contactform extends Module implements WidgetInterface
+class ContactformOverride extends Module implements WidgetInterface
 {
     /** @var string */
     const SEND_CONFIRMATION_EMAIL = 'CONTACTFORM_SEND_CONFIRMATION_EMAIL';
@@ -279,7 +279,6 @@ class Contactform extends Module implements WidgetInterface
         }
         $this->contact['contacts'] = $this->getTemplateVarContact();
         $this->contact['message'] = Tools::getValue('message');
-        $this->contact['phone'] = Tools::safeOutput(Tools::getValue('phone', ''));
         $this->contact['allow_file_upload'] = (bool) Configuration::get('PS_CUSTOMER_SERVICE_FILE_UPLOAD');
 
         if (!(bool) Configuration::isCatalogMode()) {
@@ -300,6 +299,8 @@ class Contactform extends Module implements WidgetInterface
                 )
             );
         }
+
+        $this->contact['phone'] = Tools::safeOutput(Tools::getValue('phone', ''));
 
         return [
             'contact' => $this->contact,
@@ -396,7 +397,6 @@ class Contactform extends Module implements WidgetInterface
         $extension = ['.txt', '.rtf', '.doc', '.docx', '.pdf', '.zip', '.png', '.jpeg', '.gif', '.jpg', '.webp'];
         $file_attachment = Tools::fileAttachment('fileUpload');
         $message = trim(Tools::getValue('message'));
-        $phone = trim(Tools::getValue('phone'));
         $url = Tools::getValue('url');
         $clientToken = Tools::getValue('token');
         $serverToken = $this->context->cookie->contactFormToken;
@@ -405,13 +405,6 @@ class Contactform extends Module implements WidgetInterface
         if (!($from = trim(Tools::getValue('from'))) || !Validate::isEmail($from)) {
             $this->context->controller->errors[] = $this->trans(
                 'Invalid email address.',
-                [],
-                'Shop.Notifications.Error'
-            );
-        }
-        if (empty($phone)) {
-            $this->context->controller->errors[] = $this->trans(
-                'Phone number is required.',
                 [],
                 'Shop.Notifications.Error'
             );
@@ -426,6 +419,15 @@ class Contactform extends Module implements WidgetInterface
         if (!Validate::isCleanHtml($message)) {
             $this->context->controller->errors[] = $this->trans(
                 'Invalid message',
+                [],
+                'Shop.Notifications.Error'
+            );
+        }
+
+        $phone = trim(Tools::getValue('phone'));
+        if (empty($phone)) {
+            $this->context->controller->errors[] = $this->trans(
+                'Phone number is required.',
                 [],
                 'Shop.Notifications.Error'
             );
@@ -476,7 +478,7 @@ class Contactform extends Module implements WidgetInterface
             return;
         }
 
-        // Prepend phone number to message if present (validation passed)
+        // Prepend phone number to message
         if (!empty($phone)) {
             $message = 'Telefon: ' . $phone . "\n\n" . $message;
         }
@@ -571,14 +573,13 @@ class Contactform extends Module implements WidgetInterface
             && empty($mailAlreadySend)
             && ($sendConfirmationEmail || $sendNotificationEmail)
         ) {
-            // Ensure phone is prepended to message for emails (message already has phone if it was present)
-            $emailMessage = version_compare(_PS_VERSION_, '8.0.0', '>=') ? stripslashes($message) : Tools::stripslashes($message);
+            $message = version_compare(_PS_VERSION_, '8.0.0', '>=') ? stripslashes($message) : Tools::stripslashes($message);
             $var_list = [
                 '{firstname}' => '',
                 '{lastname}' => '',
                 '{order_name}' => '-',
                 '{attached_file}' => '-',
-                '{message}' => Tools::nl2br(Tools::htmlentitiesUTF8($emailMessage)),
+                '{message}' => Tools::nl2br(Tools::htmlentitiesUTF8($message)),
                 '{email}' => $from,
                 '{product_name}' => '',
             ];
@@ -636,8 +637,7 @@ class Contactform extends Module implements WidgetInterface
             }
 
             if ($sendConfirmationEmail) {
-                // Include the actual message with phone number prepended for confirmation email
-                $var_list['{message}'] = Tools::nl2br(Tools::htmlentitiesUTF8($emailMessage));
+                $var_list['{message}'] = self::MESSAGE_PLACEHOLDER_FOR_OLDER_VERSION;
 
                 if (!Mail::Send(
                     $this->context->language->id,
@@ -693,4 +693,3 @@ class Contactform extends Module implements WidgetInterface
         */
     }
 }
-

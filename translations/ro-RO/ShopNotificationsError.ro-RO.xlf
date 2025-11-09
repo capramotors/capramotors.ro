@@ -212,6 +212,11 @@
         <target state="final">Mesajul nu poate fi gol.</target>
         <note>File: modules/contactform/contactform.php [Line: 412]</note>
       </trans-unit>
+      <trans-unit id="a8f3b2c1d4e5f6a7b8c9d0e1f2a3b4c5" approved="yes">
+        <source>Phone number is required.</source>
+        <target state="final">Numarul de telefon este obligatoriu.</target>
+        <note>File: override/modules/contactform/contactform.php [Line: 430]</note>
+      </trans-unit>
       <trans-unit id="a5e06c56adb314048d97a666db5c1d5a" approved="yes">
         <source>The minimum amount to benefit from this promo code is %s.</source>
         <target state="final">Suma minima pentru a beneficia de acest cod promotional este %s.</target>
