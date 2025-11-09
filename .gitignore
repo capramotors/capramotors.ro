@@ -47,7 +47,7 @@ modules/ps_imageslider/images/*
 modules/ps_banner/img/*
 !modules/ps_banner/img/index.php
 
-!override/*
+
 /themes/StarterTheme
 
 # Vendors and dependencies
