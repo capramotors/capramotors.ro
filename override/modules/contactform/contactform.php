@@ -637,7 +637,8 @@ class ContactformOverride extends Module implements WidgetInterface
             }
 
             if ($sendConfirmationEmail) {
-                $var_list['{message}'] = self::MESSAGE_PLACEHOLDER_FOR_OLDER_VERSION;
+                // Message is already set in $var_list above, no need to hide it
+                // $var_list['{message}'] = self::MESSAGE_PLACEHOLDER_FOR_OLDER_VERSION;
 
                 if (!Mail::Send(
                     $this->context->language->id,
