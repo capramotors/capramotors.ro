@@ -17,7 +17,7 @@
             <section class="form-fields">
 
                 {if $form_recipient == 'selection'}
-                <div class="form-group">
+                <div class="form-group d-none">
                     <label class="form-control-label">{l s='Subject' d='Shop.Forms.Labels'}</label>
                     <div class="custom-select2">
                         <select name="id_contact" class="form-control form-control-select">
@@ -39,6 +39,18 @@
                                 type="email"
                                 value="{if isset($from)}{$from}{/if}"
                                 placeholder="{l s='your@email.com' d='Shop.Forms.Help'}"
+                        >
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label">{l s='Phone number' d='Shop.Forms.Labels'}</label>
+                        <input
+                                class="form-control"
+                                name="phone"
+                                type="tel"
+                                value="{if isset($contact.phone)}{$contact.phone}{/if}"
+                                placeholder="{l s='Your phone number' d='Shop.Forms.Help'}"
+                                required
                         >
                 </div>
 
