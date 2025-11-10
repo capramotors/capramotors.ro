@@ -5,8 +5,8 @@
 
   function buildSliders() {
     var numericFeatures = [
-      { id: 3, unit: ' km' },
-      { id: 4, unit: '' },
+      { id: 3, unit: ' km', step: 100 },
+      { id: 4, unit: '', step: 1 },
       { id: 7, unit: ' cc' },
       { id: 8, unit: ' cp' },
     ];
@@ -99,7 +99,7 @@
         range: true,
         min: min,
         max: max,
-        step: 5,
+        step: feat.step || 5,
         values: [initialMin, initialMax],
         slide: function (e, ui) {
           $('#' + labelId).text(
