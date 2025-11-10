@@ -478,9 +478,40 @@ class ContactformOverride extends Module implements WidgetInterface
             return;
         }
 
-        // Prepend phone number to message
+        // Build message header with phone and buyback fields
+        $message_header = [];
+
+        // Add phone number
         if (!empty($phone)) {
-            $message = 'Telefon: ' . $phone . "\n\n" . $message;
+            $message_header[] = 'Telefon: ' . $phone;
+        }
+
+        // Add buyback fields if present (optional fields)
+        $brand = trim(Tools::getValue('buyback_brand'));
+        $model = trim(Tools::getValue('buyback_model'));
+        $year = trim(Tools::getValue('buyback_year'));
+        $cc = trim(Tools::getValue('buyback_cc'));
+        $km = trim(Tools::getValue('buyback_km'));
+
+        if (!empty($brand)) {
+            $message_header[] = 'Marca: ' . $brand;
+        }
+        if (!empty($model)) {
+            $message_header[] = 'Model: ' . $model;
+        }
+        if (!empty($year)) {
+            $message_header[] = 'An: ' . $year;
+        }
+        if (!empty($cc)) {
+            $message_header[] = 'Centimetri cubi: ' . $cc;
+        }
+        if (!empty($km)) {
+            $message_header[] = 'Kilometri: ' . $km;
+        }
+
+        // Prepend header to message
+        if (!empty($message_header)) {
+            $message = implode("\n", $message_header) . "\n\n" . $message;
         }
 
         $customer = $this->context->customer;

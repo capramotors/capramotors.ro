@@ -54,6 +54,68 @@
                         >
                 </div>
 
+                {* Buyback fields - only show on CMS page 9 (Buyback page) *}
+                {if isset($cms) && $cms.id == 9}
+                    <div class="row">
+                        <div class="form-group col-md-6">
+                            <label class="form-control-label">{l s='Brand' d='Shop.Forms.Labels'}</label>
+                            <input
+                                    class="form-control"
+                                    name="buyback_brand"
+                                    type="text"
+                                    value="{if isset($smarty.post.buyback_brand)}{$smarty.post.buyback_brand}{/if}"
+                                    placeholder="{l s='Brand' d='Shop.Forms.Help'}"
+                            >
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label class="form-control-label">{l s='Model' d='Shop.Forms.Labels'}</label>
+                            <input
+                                    class="form-control"
+                                    name="buyback_model"
+                                    type="text"
+                                    value="{if isset($smarty.post.buyback_model)}{$smarty.post.buyback_model}{/if}"
+                                    placeholder="{l s='Model' d='Shop.Forms.Help'}"
+                            >
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-md-4">
+                            <label class="form-control-label">{l s='Year' d='Shop.Forms.Labels'}</label>
+                            <select name="buyback_year" class="form-control form-control-select">
+                                <option value="">{l s='-- Select year --' d='Shop.Forms.Labels'}</option>
+                                {assign var="current_year" value=$smarty.now|date_format:"%Y"}
+                                {assign var="start_year" value=1920}
+                                {section name=year loop=200}
+                                    {assign var="year_value" value=$current_year-$smarty.section.year.index}
+                                    {if $year_value >= $start_year}
+                                        <option value="{$year_value}" {if isset($smarty.post.buyback_year) && $smarty.post.buyback_year == $year_value}selected{/if}>{$year_value}</option>
+                                    {/if}
+                                {/section}
+                            </select>
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label class="form-control-label">{l s='Cubic centimeters' d='Shop.Forms.Labels'}</label>
+                            <input
+                                    class="form-control"
+                                    name="buyback_cc"
+                                    type="text"
+                                    value="{if isset($smarty.post.buyback_cc)}{$smarty.post.buyback_cc}{/if}"
+                                    placeholder="{l s='cc' d='Shop.Forms.Help'}"
+                            >
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label class="form-control-label">{l s='Kilometers' d='Shop.Forms.Labels'}</label>
+                            <input
+                                    class="form-control"
+                                    name="buyback_km"
+                                    type="text"
+                                    value="{if isset($smarty.post.buyback_km)}{$smarty.post.buyback_km}{/if}"
+                                    placeholder="{l s='km' d='Shop.Forms.Help'}"
+                            >
+                        </div>
+                    </div>
+                {/if}
+
                 {if $contact.allow_file_upload}
                     <div class="form-group elementor-attachment-field">
                         <label class="form-control-label">{l s='Attachment' d='Shop.Forms.Labels'}</label>
