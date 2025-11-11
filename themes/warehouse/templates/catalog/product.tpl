@@ -175,7 +175,7 @@
 
                 {hook h='displayProductCampagains' product=$product position='highlighted-product'}
 
-                
+
                     {block name='product_description_short'}
                         <div id="product-description-short-{$product.id}"
                               class="rte-content product-description">{$product.description_short nofilter}</div>
