@@ -114,14 +114,16 @@
                             >
                         </div>
                     </div>
+
+                    {if $contact.allow_file_upload}
+                        <div class="form-group elementor-attachment-field">
+                            <label class="form-control-label">{l s='Attachment' d='Shop.Forms.Labels'}</label>
+                                <input type="file" name="fileUpload" class="filestyle" data-buttonText="{l s='Choose file' d='Shop.Theme.Actions'}">
+                        </div>
+                    {/if}
                 {/if}
 
-                {if $contact.allow_file_upload}
-                    <div class="form-group elementor-attachment-field">
-                        <label class="form-control-label">{l s='Attachment' d='Shop.Forms.Labels'}</label>
-                            <input type="file" name="fileUpload" class="filestyle" data-buttonText="{l s='Choose file' d='Shop.Theme.Actions'}">
-                    </div>
-                {/if}
+
 
                 <div class="form-group">
                     <label class="form-control-label">{l s='Message' d='Shop.Forms.Labels'}</label>

@@ -481,8 +481,9 @@ class ContactformOverride extends Module implements WidgetInterface
         // Build message header with phone and buyback fields
         $message_header = [];
 
-        // Add phone number
+        // Add phone number (sanitized to prevent XSS)
         if (!empty($phone)) {
+            $phone = Tools::safeOutput(strip_tags($phone));
             $message_header[] = 'Telefon: ' . $phone;
         }
 
@@ -493,19 +494,25 @@ class ContactformOverride extends Module implements WidgetInterface
         $cc = trim(Tools::getValue('buyback_cc'));
         $km = trim(Tools::getValue('buyback_km'));
 
+        // Sanitize buyback fields to prevent XSS and injection attacks
         if (!empty($brand)) {
+            $brand = Tools::safeOutput(strip_tags($brand));
             $message_header[] = 'Marca: ' . $brand;
         }
         if (!empty($model)) {
+            $model = Tools::safeOutput(strip_tags($model));
             $message_header[] = 'Model: ' . $model;
         }
         if (!empty($year)) {
+            $year = Tools::safeOutput(strip_tags($year));
             $message_header[] = 'An: ' . $year;
         }
         if (!empty($cc)) {
+            $cc = Tools::safeOutput(strip_tags($cc));
             $message_header[] = 'Centimetri cubi: ' . $cc;
         }
         if (!empty($km)) {
+            $km = Tools::safeOutput(strip_tags($km));
             $message_header[] = 'Kilometri: ' . $km;
         }
 
