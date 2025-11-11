@@ -3,7 +3,7 @@
  * Uses the contactform elementor template
  *}
 <div class="product-contact-form-wrapper elementor-contactform-wrapper">
-    <h4 class="section-title">{l s='Contacteazza-ne pentru a afla mai multe despre acest anunt' d='Modules.Capramotorscustom.Shop'}</h4>
+    <h4 class="section-title">{l s='Contacteaza-ne pentru a afla mai multe despre acest anunt' d='Modules.Capramotorscustom.Shop'}</h4>
 
     {* Notification area above form for AJAX responses *}
     <div class="js-product-contact-notification-wrapper"></div>
