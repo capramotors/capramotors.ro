@@ -102,3 +102,9 @@
   display: none;
 }
 /* kill the margin on the product tabs on pdp */
+
+/* logo */
+#desktop_logo,
+.col-mobile-logo .logo {
+  width: 200px;
+}
