@@ -486,6 +486,13 @@ class ContactformOverride extends Module implements WidgetInterface
             $message_header[] = 'Service';
         }
 
+        // Add product name if submitted from product page (before phone number)
+        $product_name = trim(Tools::getValue('product_name'));
+        if (!empty($product_name)) {
+            $product_name = Tools::safeOutput(strip_tags($product_name));
+            $message_header[] = 'Anunt: ' . $product_name;
+        }
+
         // Add phone number (sanitized to prevent XSS)
         if (!empty($phone)) {
             $phone = Tools::safeOutput(strip_tags($phone));

@@ -31,6 +31,14 @@
                     <input type="hidden" name="id_contact" value="{$form_recipient}" />
                 {/if}
 
+                {* Add product name if on product page *}
+                {if isset($is_product_page) && $is_product_page && isset($product_name) && !empty($product_name)}
+                    <div class="form-group">
+                        <label class="form-control-label">{l s='Product' d='Shop.Forms.Labels'}</label>
+                        <input type="hidden" name="product_name" class="form-control" value="{$product_name|escape:'html':'UTF-8'}" readonly />
+                    </div>
+                {/if}
+
                 <div class="form-group">
                     <label class="form-control-label">{l s='Email address' d='Shop.Forms.Labels'}</label>
                         <input

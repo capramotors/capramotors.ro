@@ -108,3 +108,7 @@
 .col-mobile-logo .logo {
   width: 200px;
 }
+
+.product-contact-form-wrapper .form-control-label {
+  display: none;
+}

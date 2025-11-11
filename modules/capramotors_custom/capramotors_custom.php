@@ -13,6 +13,8 @@ if (!defined('_PS_VERSION_')) {
     exit;
 }
 
+use ProductControllerCore;
+
 class Capramotors_Custom extends Module
 {
     public function __construct()
@@ -41,7 +43,18 @@ class Capramotors_Custom extends Module
     public function install()
     {
         return parent::install()
-            && $this->registerHook('actionFrontControllerSetMedia');
+            && $this->registerHook('actionFrontControllerSetMedia')
+            && $this->registerHook('displayFooterProduct');
+    }
+
+    /**
+     * Reset the module - re-register hooks
+     *
+     * @return bool
+     */
+    public function reset()
+    {
+        return $this->uninstall(false) && $this->install();
     }
 
     /**
@@ -72,6 +85,84 @@ class Capramotors_Custom extends Module
                 'priority' => 800,
             ]
         );
+    }
+
+    /**
+     * Get content for module configuration page
+     * This also ensures hooks are registered
+     */
+    public function getContent()
+    {
+        // Ensure hooks are registered (in case they weren't during install)
+        $this->registerHook('displayFooterProduct');
+
+        return $this->displayConfirmation($this->trans('Module configured successfully.', [], 'Admin.Notifications.Success'));
+    }
+
+    /**
+     * Display contact form in product footer on product page
+     *
+     * @param array $params Contains 'product' and 'category' arrays
+     * @return string HTML output
+     */
+    public function hookDisplayFooterProduct($params)
+    {
+        // Only show on product pages
+        if ($this->context->controller->php_self !== 'product') {
+            return '';
+        }
+
+        // Get contactform module instance
+        $contactformModule = Module::getInstanceByName('contactform');
+
+        if (!$contactformModule || !$contactformModule->active) {
+            return '';
+        }
+
+        // Check if contactform implements WidgetInterface
+        if (!($contactformModule instanceof PrestaShop\PrestaShop\Core\Module\WidgetInterface)) {
+            return '';
+        }
+
+        // Get widget variables from contactform
+        $widgetVars = $contactformModule->getWidgetVariables('displayAfterProductWrapper', []);
+
+        // Add form_recipient for product page (Service contact = 3)
+        $widgetVars['form_recipient'] = 3;
+
+        // Add product information if available (for PDP)
+        // The product is passed as $params['product'] from the template hook
+        // It's a presented product array from getTemplateVarProduct()
+        if (isset($params['product'])) {
+            $product = $params['product'];
+
+            // Debug: Check what we're getting
+            // Product can be array or might need to get from context
+            if (is_array($product) && isset($product['name'])) {
+                $widgetVars['product_name'] = $product['name'];
+                $widgetVars['is_product_page'] = true;
+            } else {
+                // Fallback: try to get product from context controller
+                if ($this->context->controller instanceof ProductControllerCore) {
+                    $controllerProduct = $this->context->controller->getTemplateVarProduct();
+                    if (isset($controllerProduct['name'])) {
+                        $widgetVars['product_name'] = $controllerProduct['name'];
+                        $widgetVars['is_product_page'] = true;
+                    }
+                }
+            }
+        }
+
+        // Assign variables to smarty (both in widgetVars and directly for template include)
+        $this->context->smarty->assign($widgetVars);
+        // Also assign directly so they're available when including the contactform template
+        if (isset($widgetVars['product_name'])) {
+            $this->context->smarty->assign('product_name', $widgetVars['product_name']);
+            $this->context->smarty->assign('is_product_page', true);
+        }
+
+        // Render using the elementor template (which supports form_recipient)
+        return $this->display(__FILE__, 'views/templates/hook/product-contactform.tpl');
     }
 }
 
