@@ -22,7 +22,7 @@
                     <div class="custom-select2">
                         <select name="id_contact" class="form-control form-control-select">
                             {foreach from=$contact.contacts item=contact_elt}
-                                <option value="{$contact_elt.id_contact}">{$contact_elt.name}</option>
+                                <option value="{$contact_elt.id_contact}" {if isset($cms) && $cms.id == 10 && $contact_elt.id_contact == 3}selected{/if}>{$contact_elt.name}</option>
                             {/foreach}
                         </select>
                     </div>

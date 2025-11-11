@@ -481,6 +481,11 @@ class ContactformOverride extends Module implements WidgetInterface
         // Build message header with phone and buyback fields
         $message_header = [];
 
+        // Add "Service" keyword if id_contact is 3
+        if ($id_contact == 3) {
+            $message_header[] = 'Service';
+        }
+
         // Add phone number (sanitized to prevent XSS)
         if (!empty($phone)) {
             $phone = Tools::safeOutput(strip_tags($phone));
