@@ -252,6 +252,10 @@
                              {/if}
                         {/block}
                     </div>
+
+                    {block name='hook_display_capramotors_product_contact'}
+                        {hook h='displayCapramotorsProduct' product=$product}
+                    {/block}
                 </div>
                 </div>
             </div>
