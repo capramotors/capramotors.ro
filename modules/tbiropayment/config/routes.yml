@@ -1,0 +1,5 @@
+tbiro_payment_configuration_form:
+    path: /tbiropayment/configuration
+    methods: [GET, POST]
+    defaults:
+        _controller: 'PrestaShop\Module\TbiroPayment\Controller\TbiroPaymentConfigurationController::index'

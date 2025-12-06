@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<module>
+    <name>tbiropayment</name>
+    <displayName><![CDATA[tbi bank]]></displayName>
+    <version><![CDATA[3.4.2]]></version>
+    <description><![CDATA[Credit calculator]]></description>
+    <author><![CDATA[Ilko Ivanov]]></author>
+    <tab><![CDATA[payments_gateways]]></tab>
+    <confirmUninstall><![CDATA[Are you sure that you want to uninstall?]]></confirmUninstall>
+    <is_configurable>1</is_configurable>
+    <need_instance>1</need_instance>
+</module>

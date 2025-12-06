@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file original="admin4589gopxjcg6xiiozdg" source-language="ro-RO" target-language="ro-RO" datatype="plaintext">
+    <body>
+      <trans-unit id="37984705e5bf1575ad50b865ce18d878">
+        <source>tbi bank RO</source>
+        <target>tbi bank RO</target>
+        <note>Line: </note>
+      </trans-unit>
+      <trans-unit id="792ebba9942c330b670cf31b51fe81ae">
+        <source>Credit calculator</source>
+        <target>Calculator de credit</target>
+        <note>Line: </note>
+      </trans-unit>
+      <trans-unit id="b4b8e58a7dcb3aa35bc4215affe4f3e0">
+        <source>Are you sure that you want to uninstall?</source>
+        <target>Sunteți sigur că doriți să dezinstalați?</target>
+        <note>Line: </note>
+      </trans-unit>
+      <trans-unit id="0f40e8817b005044250943f57a21c5e7">
+        <source>No name provided</source>
+        <target>Nu este furnizat niciun nume</target>
+        <note>Line: </note>
+      </trans-unit>
+      <trans-unit id="9dad131d4776a04d641589b3c35a4d95">
+        <source>Communication problem or You have already sent this order!</source>
+        <target>Problemă de comunicare sau Ați trimis deja această comandă!</target>
+        <note>Line: </note>
+      </trans-unit>
+      <trans-unit id="39c9c93b12e2b139007313a7be640bb2">
+        <source>Enable/Disable the tbi bank RO module</source>
+        <target>Activați/dezactivați modulul tbi bank RO</target>
+        <note>Line: </note>
+      </trans-unit>
+      <trans-unit id="04331f6bb9cbb4fe0ed5da011c1a7f7c">
+        <source>Show button</source>
+        <target>Afișează butonul</target>
+        <note>Line: </note>
+      </trans-unit>
+      <trans-unit id="d1aa75ce63fbd125ebb2d0b3d602364b">
+        <source>Show module button on product page</source>
+        <target>Afișați butonul modulului pe pagina produsului</target>
+        <note>Line: </note>
+      </trans-unit>
+      <trans-unit id="d6f217fc5caff6a1f3ed005ea641f394">
+        <source>Unique shop identifier</source>
+        <target>Identificator unic de magazin</target>
+        <note>Line: </note>
+      </trans-unit>
+      <trans-unit id="2815394de4d46e1e75216720d72091f9">
+        <source>Unique shop identifier in the tbi bank system</source>
+        <target>Identificator unic de magazin în sistemul bancar tbi</target>
+        <note>Line: </note>
+      </trans-unit>
+      <trans-unit id="c50fe970c704a0178a5a625d7ceb7664">
+        <source>Store ID for eCommerce tbi bank system</source>
+        <target>ID magazin pentru eCommerce tbi bank system</target>
+        <note>Line: </note>
+      </trans-unit>
+      <trans-unit id="5f4b4e8488db508d5bcf266f4befc8cb">
+        <source>Store ID for eCommerce tbi bank system. Required for system authentication</source>
+        <target>ID magazin pentru eCommerce tbi bank system. Necesar pentru autentificarea sistemului</target>
+        <note>Line: </note>
+      </trans-unit>
+      <trans-unit id="59ac4779cd36c2c714f5051f60ec37e5">
+        <source>Username for eCommerce tbi bank system</source>
+        <target>Nume de utilizator pentru sistemul bancar eCommerce tbi</target>
+        <note>Line: </note>
+      </trans-unit>
+      <trans-unit id="e7aa34a534f588f16d04ef347e6508a0">
+        <source>Username for eCommerce tbi bank system. Required for system authentication</source>
+        <target>Nume de utilizator pentru sistemul bancar eCommerce tbi. Necesar pentru autentificarea sistemului</target>
+        <note>Line: </note>
+      </trans-unit>
+      <trans-unit id="710821d1a8ab6eed14f90a6ca4f5e2f4">
+        <source>Password for eCommerce tbi bank system</source>
+        <target>Parola pentru sistemul bancar eCommerce tbi</target>
+        <note>Line: </note>
+      </trans-unit>
+      <trans-unit id="b837945d07d6c0b9960eec9f308cc50e">
+        <source>Password for eCommerce tbi bank system. Required for system authentication</source>
+        <target>Parola pentru sistemul bancar eCommerce tbi. Necesar pentru autentificarea sistemului</target>
+        <note>Line: </note>
+      </trans-unit>
+      <trans-unit id="2469a633014c8a7f067031e3dd2a546c">
+        <source>First label next to payment button</source>
+        <target>Prima etichetă de lângă butonul de plată</target>
+        <note>Line: </note>
+      </trans-unit>
+      <trans-unit id="75c0b4653c2c653b0d86264c6a8192ba">
+        <source>The first text that appears to the right of the tbi bank payment button</source>
+        <target>Primul text care apare în dreapta butonului de plată a tbi bank</target>
+        <note>Line: </note>
+      </trans-unit>
+      <trans-unit id="e501ae31d1490c164029465115a06762">
+        <source>tbi bank: Cumpara acum, plateste mai tarziu</source>
+        <target>tbi bank: Cumpara acum, plateste mai tarziu</target>
+        <note>Line: </note>
+      </trans-unit>
+      <trans-unit id="5a37a8747155f224ffc4cb71388cf6c1">
+        <source>Second label next to payment button</source>
+        <target>A doua etichetă lângă butonul de plată</target>
+        <note>Line: </note>
+      </trans-unit>
+      <trans-unit id="dccd9164891bb4ec9c22f17deeb610bc">
+        <source>The second text that appears to the right of the tbi bank payment button</source>
+        <target>Al doilea text care apare în dreapta butonului de plată a tbi bank</target>
+        <note>Line: </note>
+      </trans-unit>
+      <trans-unit id="320268d136b1815befd2679b0b4279e2">
+        <source>100% online, fara hartii sau drumuri la banca</source>
+        <target>100% online, fara hartii sau drumuri la banca</target>
+        <note>Line: </note>
+      </trans-unit>
+      <trans-unit id="8001b0606e8f2e556a0a7d9356f4ad71">
+        <source>First label next to IRIS payment button</source>
+        <target>Prima etichetă de lângă butonul de plată IRIS</target>
+        <note>Line: </note>
+      </trans-unit>
+      <trans-unit id="1e800b539994fd91559b1ae17251e5de">
+        <source>The first text that appears to the right of the IRIS Pay RO payment button</source>
+        <target>Primul text care apare în dreapta butonului de plată IRIS Pay TO</target>
+        <note>Line: </note>
+      </trans-unit>
+      <trans-unit id="6b60e44e1ef1df28cf52f61373cc50b0">
+        <source>Second label next to IRIS payment button</source>
+        <target>A doua etichetă de lângă butonul de plată IRIS</target>
+        <note>Line: </note>
+      </trans-unit>
+      <trans-unit id="d2069f14602235b5148c8f2bf09be321">
+        <source>The second text that appears to the right of the IRIS Pay RO payment button</source>
+        <target>Al doilea text care apare în dreapta butonului de plată IRIS Pay TO</target>
+        <note>Line: </note>
+      </trans-unit>
+      <trans-unit id="c8884955282fcb6defacf6eb950f9440">
+        <source>IRIS IBAN</source>
+        <target>IRIS IBAN</target>
+        <note>Line: </note>
+      </trans-unit>
+      <trans-unit id="5460281eac43f298cef0339dc246f40c">
+        <source>IRIS Key</source>
+        <target>IRIS Key</target>
+        <note>Line: </note>
+      </trans-unit>
+      <trans-unit id="d3a71b8d883bc92e65d3b28baf8cec00">
+        <source>tbi bank Credit calculator</source>
+        <target>tbi bank Calculator de credit</target>
+        <note>Line: </note>
+      </trans-unit>
+      <trans-unit id="a0b7c31494c182bff5dfa561ba2be880">
+        <source>tbi bank Status</source>
+        <target>tbi Bank Status</target>
+        <note>Line: </note>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

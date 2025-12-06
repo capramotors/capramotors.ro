@@ -1,0 +1,61 @@
+{{ form_start(grid.filter_form, {'attr': {'id': grid.id ~ '_filter_form', 'class': 'table-responsive'}}) }}
+<table class="grid-table js-grid-table table {% if is_ordering_column(grid) %}grid-ordering-column{% endif %} {% if grid.attributes.is_empty_state %}border-0{% endif %}"
+       id="{{ grid.id }}_grid_table"
+       data-query="{{ grid.data.query }}"
+>
+  <thead class="thead-default">
+  {% block grid_table_head %}
+    {{ include('@PrestaShop/Admin/Common/Grid/Blocks/Table/headers_row.html.twig', {'grid': grid}) }}
+    {{ include('@PrestaShop/Admin/Common/Grid/Blocks/Table/filters_row.html.twig', {'grid': grid}) }}
+  {% endblock %}
+  </thead>
+  <tbody>
+  {% block grid_table_body %}
+    {% if grid.data.records is not empty %}
+      {% for record in grid.data.records %}
+        <tr>
+          {% for column in grid.columns %}
+            <td class="{{ column.type }}-type column-{{ column.id }}{% if column.options.clickable is defined and column.options.clickable %} clickable{% endif %}">
+              {{ column_content(record, column, grid) }}
+            </td>
+          {% endfor %}
+            {% if record.id_order is defined %}
+            <td name="tbiro_status" id="tbiro_status_{{record.id_order}}"></td>
+            {% endif %}
+        </tr>
+      {% endfor %}
+    {% else %}
+      {{ include('@PrestaShop/Admin/Common/Grid/Blocks/Table/empty_row.html.twig', {'grid': grid}) }}
+    {% endif %}
+  {% endblock %}
+  </tbody>
+  {% block grid_table_footer %}{% endblock %}
+</table>
+{{ form_end(grid.filter_form) }}
+
+{% if app.request.attributes.get('_controller') == "PrestaShopBundle\\Controller\\Admin\\Sell\\Order\\OrderController::indexAction" %}
+<script>
+console.log("TBIRO");
+    const tbiro_statuses = document.getElementsByName("tbiro_status");
+    $.ajax({
+        type: "POST",
+        data: "",
+        url: "/index.php?fc=module&module=tbiropayment&controller=getorderstatuses",
+        dataType: 'json',
+        success: function(msg){
+            tbiro_statuses.forEach(status => {
+                const status_id = status.id;
+                const order_id = status_id.substring(status_id.lastIndexOf('_') + 1);
+                msg.status.forEach(item => {
+                    if (item.order_id == order_id){
+                        status.innerText = item.order_status;
+                    }
+                });
+            });
+        },
+        error: function(response){
+            console.log(response);
+        }
+    });
+</script>
+{% endif %}

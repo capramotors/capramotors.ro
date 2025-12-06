@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file original="admin4589gopxjcg6xiiozdg" source-language="ro-RO" target-language="ro-RO" datatype="plaintext">
+    <body>
+      <trans-unit id="e2b7dec8fa4b498156dfee6e4c84b156">
+        <source>This payment method is not available.</source>
+        <target>Această metodă de plată nu este disponibilă.</target>
+        <note>Line: </note>
+      </trans-unit>
+      <trans-unit id="926e734c583f9f1940987ec64a654dfc">
+        <source>CREDIT ONLINE INFORMATION WITH TBI BANK!</source>
+        <target>CREDIT INFORMATII ONLINE CU TBI BANK!</target>
+        <note>Line: </note>
+      </trans-unit>
+      <trans-unit id="63f70dc4ccc6c822335438740df2edf1">
+        <source>Your order on is complete.</source>
+        <target>Comanda dvs. este finalizată.</target>
+        <note>Line: </note>
+      </trans-unit>
+      <trans-unit id="b2f40690858b404ed10e62bdf422c704">
+        <source>Amount</source>
+        <target>Cantitate</target>
+        <note>Line: </note>
+      </trans-unit>
+      <trans-unit id="d15feee53d81ea16269e54d4784fa123">
+        <source>We noticed a problem with your order. If you think this is an error, feel free to contact our</source>
+        <target>Am observat o problemă cu comanda dvs. Dacă credeți că aceasta este o eroare, nu ezitați să ne contactați</target>
+        <note>Line: </note>
+      </trans-unit>
+      <trans-unit id="66fcf4c223bbf4c7c886d4784e1f62e4">
+        <source>expert customer support team</source>
+        <target>echipă de asistență pentru clienți experți</target>
+        <note>Line: </note>
+      </trans-unit>
+      <trans-unit id="da36cfaf48b9e19896e23e1207040d1e">
+        <source>months</source>
+        <target>luni</target>
+        <note>Line: </note>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>
